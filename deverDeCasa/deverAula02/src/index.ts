@@ -16,7 +16,7 @@ function pegarStatus(status: Status): string {
       return "Seu pedido foi cancelado. Ligue para XXXXX";
 
     case Status.finalizado:
-      return "Seu pedido foi finalizado na data XX/XXX";
+      return "Seu pedido foi finalizado na data XX/XXXX";
 
     default:
       return "Status desconhecido";
