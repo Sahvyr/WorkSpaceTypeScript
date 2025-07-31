@@ -1,12 +1,38 @@
-enum NivelDeAcesso {
-  usuario = 1,
-  moderador = 2,
-  administrador = 3,
-}
+type Pessoa = {
+  nome: string;
+  dataNascimento: Date;
+  endereco: string;
+  foto: string;
+  ensinoMedioConcluido: boolean;
+  valeTransporte: boolean;
+  passagemDiaria: number;
+  salario: number;
+  sexo: "masculino" | "feminino" | "Masculino" | "Feminino";
+};
 
-function temPermissao(nivel: NivelDeAcesso): boolean {
-  return nivel >= NivelDeAcesso.moderador;
-}
+let pessoa: Pessoa[] = [
+  {
+    nome: "João",
+    dataNascimento: new Date("2000-01-01"),
+    endereco: "Rua A, 123",
+    foto: "foto1.jpg",
+    ensinoMedioConcluido: true,
+    valeTransporte: true,
+    passagemDiaria: 4.5,
+    salario: 1500,
+    sexo: "masculino",
+  },
+  {
+    nome: "Maria",
+    dataNascimento: new Date("1998-05-15"),
+    endereco: "Avenida B, 456",
+    foto: "foto2.jpg",
+    ensinoMedioConcluido: true,
+    valeTransporte: false,
+    passagemDiaria: 0,
+    salario: 2000,
+    sexo: "Feminino",
+  },
+];
 
-console.log(`O usuario tem permissão? ${temPermissao(NivelDeAcesso.usuario)}`); // false
-console.log(temPermissao(NivelDeAcesso.moderador)); // true
+console.log(pessoa);
