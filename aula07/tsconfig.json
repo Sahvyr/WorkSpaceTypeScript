@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "./dist", //onde o js compilado será colocado
+    "rootDir": "./src" //qual arquivo .ts será compilado e transformado em .js enviado para o outDir
+  }
+}
